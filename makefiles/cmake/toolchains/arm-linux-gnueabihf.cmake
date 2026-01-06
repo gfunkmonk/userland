@@ -13,9 +13,9 @@ set(CMAKE_SYSTEM_PROCESSOR arm)
 add_definitions("-mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard -marm")
 
 # rdynamic means the backtrace should work
-IF (CMAKE_BUILD_TYPE MATCHES "Debug")
+if (CMAKE_BUILD_TYPE MATCHES "Debug")
    add_definitions(-rdynamic)
-ENDIF()
+endif()
 
 # avoids annoying and pointless warnings from gcc
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -U_FORTIFY_SOURCE")
