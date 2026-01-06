@@ -3,13 +3,13 @@
 # CMake defines to cross-compile to ARM/Linux on BCM2708 using glibc.
 #
 
-SET(CMAKE_SYSTEM_NAME Linux)
-SET(CMAKE_C_COMPILER bcm2708-gcc)
-SET(CMAKE_CXX_COMPILER bcm2708-g++)
-SET(CMAKE_ASM_COMPILER bcm2708-gcc)
-SET(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_C_COMPILER bcm2708-gcc)
+set(CMAKE_CXX_COMPILER bcm2708-g++)
+set(CMAKE_ASM_COMPILER bcm2708-gcc)
+set(CMAKE_SYSTEM_PROCESSOR arm)
 
-ADD_DEFINITIONS("-march=armv6")
+add_definitions("-march=armv6")
 
 # rdynamic means the backtrace should work
 IF (CMAKE_BUILD_TYPE MATCHES "Debug")
@@ -17,5 +17,5 @@ IF (CMAKE_BUILD_TYPE MATCHES "Debug")
 ENDIF()
 
 # avoids annoying and pointless warnings from gcc
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -U_FORTIFY_SOURCE")
-SET(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -c")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -U_FORTIFY_SOURCE")
+set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -c")
