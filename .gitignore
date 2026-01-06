@@ -30,3 +30,6 @@ build/
 *.pts
 *.ppm
 *.mkv
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
