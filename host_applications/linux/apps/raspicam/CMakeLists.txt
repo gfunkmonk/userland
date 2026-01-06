@@ -1,12 +1,12 @@
 
 # raspistill/raspivid/raspiyuv
 
-SET(COMPILE_DEFINITIONS -Werror)
+set(COMPILE_DEFINITIONS -Werror)
 
 # Set --no-as-needed to stop the linker discarding mmal_vc_client
 # as it can't see that the constructor registers a load of functionality
 # with the MMAL core.
-SET( CMAKE_EXE_LINKER_FLAGS "-Wl,--no-as-needed" )
+set( CMAKE_EXE_LINKER_FLAGS "-Wl,--no-as-needed" )
 
 include_directories(${PROJECT_SOURCE_DIR}/host_applications/linux/libs/bcm_host/include)
 include_directories(${PROJECT_SOURCE_DIR}/host_applications/linux/apps/raspicam/)

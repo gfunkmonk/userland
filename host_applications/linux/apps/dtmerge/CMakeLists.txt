@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 
 get_filename_component (VIDEOCORE_ROOT ../../../.. ABSOLUTE)
 include (${VIDEOCORE_ROOT}/makefiles/cmake/global_settings.cmake)
